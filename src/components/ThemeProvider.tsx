@@ -10,7 +10,9 @@ interface ThemeContextType {
   themeInfo: (typeof themes)[ThemeName];
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextType | undefined>(
+  undefined
+);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
@@ -67,14 +69,21 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     themeInfo,
   };
 
-  // Prevent hydration mismatch
-  if (!mounted) {
-    return <div data-theme={defaultThemeName}>{children}</div>;
-  }
+  // Always provide context, but use default theme during SSR
+  const contextValue = mounted
+    ? value
+    : {
+        currentTheme: defaultThemeName,
+        setTheme: () => {},
+        availableThemes: Object.keys(themes) as ThemeName[],
+        themeInfo: themes[defaultThemeName],
+      };
 
   return (
-    <ThemeContext.Provider value={value}>
-      <div data-theme={currentTheme}>{children}</div>
+    <ThemeContext.Provider value={contextValue}>
+      <div data-theme={mounted ? currentTheme : defaultThemeName}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 };

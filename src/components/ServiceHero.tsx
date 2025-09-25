@@ -154,5 +154,3 @@ const ServiceHero = memo<ServiceHeroProps>(
 ServiceHero.displayName = "ServiceHero";
 
 export default ServiceHero;
-
-

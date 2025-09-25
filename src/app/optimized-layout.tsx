@@ -18,10 +18,16 @@ const Footer = dynamic(() => import("@/components/Footer"), {
   ssr: true,
 });
 
-const ThemeProvider = dynamic(() => import("@/components/ThemeProvider"), {
-  loading: () => <div />,
-  ssr: false,
-});
+const ThemeProvider = dynamic(
+  () =>
+    import("@/components/ThemeProvider").then((mod) => ({
+      default: mod.ThemeProvider,
+    })),
+  {
+    loading: () => <div />,
+    ssr: false,
+  }
+);
 
 const inter = Inter({
   subsets: ["latin"],
@@ -111,5 +117,3 @@ const OptimizedLayout = memo<OptimizedLayoutProps>(
 OptimizedLayout.displayName = "OptimizedLayout";
 
 export default OptimizedLayout;
-
-

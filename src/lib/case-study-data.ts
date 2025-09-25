@@ -398,5 +398,3 @@ export const getCaseStudiesByCategory = (category: string): CaseStudyData[] => {
     (study) => study.category === category
   );
 };
-
-

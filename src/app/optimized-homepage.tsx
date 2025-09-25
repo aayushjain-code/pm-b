@@ -101,9 +101,9 @@ const CTASection = memo(() => (
         </div>
       </div>
       <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-        If you're planning a survey, conservation project, retrofit or an asset
-        audit - {BRAND.NAME} can help. Contact us for a free consultation and
-        let us preserve your cultural heritage.
+        If you&apos;re planning a survey, conservation project, retrofit or an
+        asset audit - {BRAND.NAME} can help. Contact us for a free consultation
+        and let us preserve your cultural heritage.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button
@@ -349,5 +349,3 @@ const OptimizedHomepage = memo(() => {
 OptimizedHomepage.displayName = "OptimizedHomepage";
 
 export default OptimizedHomepage;
-
-

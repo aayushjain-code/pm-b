@@ -58,12 +58,12 @@ export default function Contact() {
           <Card variant="elevated" padding="lg">
             <CardContent>
               <CheckCircle className="h-16 w-16 text-success-500 mx-auto mb-4" />
-              <CardTitle className="text-2xl mb-4" style={{ color: "#1a1a1a" }}>
+              <CardTitle className="text-2xl mb-4 text-gray-900">
                 Thank You!
               </CardTitle>
-              <p className="mb-6" style={{ color: "#374151" }}>
-                Your message has been sent successfully. We'll get back to you
-                within 24 hours.
+              <p className="mb-6 text-gray-600">
+                Your message has been sent successfully. We&apos;ll get back to
+                you within 24 hours.
               </p>
               <Button
                 onClick={() => setIsSubmitted(false)}
@@ -126,7 +126,7 @@ export default function Contact() {
                 style={{ color: "white" }}
               >
                 Ready to start your project? Get in touch for a free
-                consultation, sample deliverables, or a pilot survey. We'll
+                consultation, sample deliverables, or a pilot survey. We&apos;ll
                 propose a clear capture strategy and transparent pricing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -211,8 +211,8 @@ export default function Contact() {
               className="text-xl max-w-2xl mx-auto"
               style={{ color: "#374151" }}
             >
-              Fill out the form below and we'll get back to you within 24 hours
-              with a detailed response to your inquiry.
+              Fill out the form below and we&apos;ll get back to you within 24
+              hours with a detailed response to your inquiry.
             </p>
           </div>
 
@@ -221,7 +221,7 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <Card variant="elevated" padding="lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl" style={{ color: "#1a1a1a" }}>
+                  <CardTitle className="text-2xl text-gray-900">
                     Send us a Message
                   </CardTitle>
                 </CardHeader>
@@ -314,7 +314,7 @@ export default function Contact() {
             <div className="space-y-8">
               <Card variant="outlined" padding="lg">
                 <CardHeader>
-                  <CardTitle className="text-xl" style={{ color: "#1a1a1a" }}>
+                  <CardTitle className="text-xl text-gray-900">
                     Contact Information
                   </CardTitle>
                 </CardHeader>
@@ -380,12 +380,12 @@ export default function Contact() {
 
               <Card variant="filled" padding="lg">
                 <CardHeader>
-                  <CardTitle className="text-xl" style={{ color: "#1a1a1a" }}>
+                  <CardTitle className="text-xl text-gray-900">
                     Quick Response
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4" style={{ color: "#374151" }}>
+                  <p className="mb-4 text-gray-600">
                     For urgent inquiries or immediate assistance, call us
                     directly or use our quick response options.
                   </p>
@@ -430,9 +430,9 @@ export default function Contact() {
             className="text-xl mb-8 max-w-3xl mx-auto"
             style={{ color: "white" }}
           >
-            Don't wait - get in touch today for a free consultation and discover
-            how Praman 3D can help you achieve your project goals with precision
-            and efficiency.
+            Don&apos;t wait - get in touch today for a free consultation and
+            discover how Praman 3D can help you achieve your project goals with
+            precision and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

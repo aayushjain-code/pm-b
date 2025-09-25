@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Debounce function for performance optimization
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -20,7 +20,7 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 // Throttle function for performance optimization
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
@@ -36,7 +36,7 @@ export function throttle<T extends (...args: any[]) => any>(
 }
 
 // Memoization utility for expensive calculations
-export function memoize<T extends (...args: any[]) => any>(
+export function memoize<T extends (...args: unknown[]) => unknown>(
   fn: T,
   keyGenerator?: (...args: Parameters<T>) => string
 ): T {
@@ -49,7 +49,7 @@ export function memoize<T extends (...args: any[]) => any>(
       return cache.get(key);
     }
 
-    const result = fn(...args);
+    const result = fn(...args) as ReturnType<T>;
     cache.set(key, result);
     return result;
   }) as T;
@@ -188,7 +188,7 @@ export const storage = {
     }
   },
 
-  set: (key: string, value: any): boolean => {
+  set: (key: string, value: unknown): boolean => {
     if (typeof window === "undefined") return false;
 
     try {
@@ -265,5 +265,3 @@ export async function retry<T>(
 
   throw lastError!;
 }
-
-

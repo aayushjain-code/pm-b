@@ -347,8 +347,8 @@ export default function GalleryPage() {
             className="text-xl mb-8 max-w-3xl mx-auto"
             style={{ color: "white" }}
           >
-            If you're planning a survey, conservation project, retrofit or an
-            asset audit - Praman 3D can help. Contact us for a free
+            If you&apos;re planning a survey, conservation project, retrofit or
+            an asset audit - Praman 3D can help. Contact us for a free
             consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

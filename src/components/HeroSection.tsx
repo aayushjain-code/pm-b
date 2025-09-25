@@ -154,5 +154,3 @@ const HeroSection = memo<HeroSectionProps>(
 HeroSection.displayName = "HeroSection";
 
 export default HeroSection;
-
-

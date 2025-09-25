@@ -40,7 +40,7 @@ const Card: React.FC<CardProps> = ({
       outlined: "bg-white border-2 border-yellow-200",
       filled: "bg-yellow-50 border border-yellow-200",
     };
-    return variants[variant] || variants.default;
+    return variants[variant || "default"] || variants.default;
   };
 
   const getPaddingClasses = (padding: CardVariantProps["padding"]) => {
@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({
       md: "p-6",
       lg: "p-8",
     };
-    return paddings[padding] || paddings.md;
+    return paddings[padding || "md"] || paddings.md;
   };
 
   const baseClasses = "rounded-xl transition-all duration-300";

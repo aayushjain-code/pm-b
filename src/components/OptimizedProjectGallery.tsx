@@ -20,7 +20,7 @@ import {
 } from "@/lib/constants";
 import { caseStudyData, type CaseStudyData } from "@/lib/case-study-data";
 
-interface ProjectImage {
+export interface ProjectImage {
   src: string;
   alt: string;
   title: string;

@@ -56,7 +56,7 @@ const Input: React.FC<InputProps> = ({
       error: "border-red-500 focus:border-red-500 focus:ring-red-500",
       success: "border-green-500 focus:border-green-500 focus:ring-green-500",
     };
-    return variants[variant] || variants.default;
+    return variants[variant || "default"] || variants.default;
   };
 
   const getSizeClasses = (size: InputVariantProps["size"]) => {
@@ -65,7 +65,7 @@ const Input: React.FC<InputProps> = ({
       md: "px-4 py-3 text-base",
       lg: "px-4 py-4 text-lg",
     };
-    return sizes[size] || sizes.md;
+    return sizes[size || "md"] || sizes.md;
   };
 
   const baseClasses =

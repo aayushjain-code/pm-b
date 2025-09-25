@@ -39,10 +39,10 @@ export default function TermsOfService() {
             </div>
             <div className="space-y-4 text-gray-700">
               <p>
-                By accessing and using Praman 3D's website and services, you
-                accept and agree to be bound by the terms and provision of this
-                agreement. If you do not agree to abide by the above, please do
-                not use this service.
+                By accessing and using Praman 3D&apos;s website and services,
+                you accept and agree to be bound by the terms and provision of
+                this agreement. If you do not agree to abide by the above,
+                please do not use this service.
               </p>
             </div>
           </section>
@@ -284,4 +284,3 @@ export default function TermsOfService() {
     </div>
   );
 }
-

@@ -134,7 +134,7 @@ const ServicePageTemplate = memo<ServicePageTemplateProps>(
                 What We Deliver
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We don't just collect data – we turn it into actionable
+                We don&apos;t just collect data – we turn it into actionable
                 intelligence
               </p>
             </div>
@@ -274,5 +274,3 @@ const ServicePageTemplate = memo<ServicePageTemplateProps>(
 ServicePageTemplate.displayName = "ServicePageTemplate";
 
 export default ServicePageTemplate;
-
-

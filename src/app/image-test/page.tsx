@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function ImageTestPage() {
   const [imageStatus, setImageStatus] = useState<Record<string, boolean>>({});
@@ -97,12 +98,12 @@ export default function ImageTestPage() {
         </div>
 
         <div className="mt-8 text-center">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
           >
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

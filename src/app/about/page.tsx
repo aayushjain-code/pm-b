@@ -362,8 +362,8 @@ export default function About() {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-yellow-100 mb-8 max-w-3xl mx-auto">
-            If you're planning a survey, conservation project, retrofit or an
-            asset audit - Praman 3D can help. Contact us for a free
+            If you&apos;re planning a survey, conservation project, retrofit or
+            an asset audit - Praman 3D can help. Contact us for a free
             consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

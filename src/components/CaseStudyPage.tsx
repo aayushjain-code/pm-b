@@ -313,7 +313,7 @@ const CaseStudyPage = memo<CaseStudyPageProps>(({ caseStudy }) => {
               <CardContent className="pt-8">
                 <Quote className="h-12 w-12 text-blue-600 mx-auto mb-6" />
                 <blockquote className="text-xl text-gray-700 mb-6 italic">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div>
                   <p className="font-semibold text-gray-900">
@@ -392,5 +392,3 @@ const CaseStudyPage = memo<CaseStudyPageProps>(({ caseStudy }) => {
 CaseStudyPage.displayName = "CaseStudyPage";
 
 export default CaseStudyPage;
-
-

@@ -48,8 +48,8 @@ export default function CaseStudyDetailPage() {
                 Case Study Not Found
               </h1>
               <p className="text-gray-600 mb-6">
-                The case study you're looking for doesn't exist or has been
-                moved.
+                The case study you&apos;re looking for doesn&apos;t exist or has
+                been moved.
               </p>
               <Link
                 href="/gallery"
@@ -67,5 +67,3 @@ export default function CaseStudyDetailPage() {
 
   return <CaseStudyPage caseStudy={caseStudy} />;
 }
-
-

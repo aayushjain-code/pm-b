@@ -7,6 +7,12 @@ export const BRAND = {
     "Professional engineering services specializing in 3D laser scanning, digital documentation, and heritage conservation with a commitment to precision and cultural sensitivity.",
   LOCATION: "India & Australia",
   ESTABLISHED: "Established 2025",
+  PRIMARY: "#ea580c",
+  PRIMARY_DARK: "#c2410c",
+  PRIMARY_DARKER: "#9a3412",
+  CONTAINER_PADDING: "px-4 sm:px-6 lg:px-8",
+  LOGO: "/images/praman-logo.jpeg",
+  HERO_HEIGHT: "min-h-screen",
 } as const;
 
 // Contact Information
@@ -107,5 +113,3 @@ export const ROUTES = {
     HERITAGE_CONSERVATION: "/services/heritage-conservation",
   },
 } as const;
-
-

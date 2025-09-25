@@ -66,9 +66,10 @@ export const usePerformance = () => {
       for (const entry of list.getEntries()) {
         if (
           entry.entryType === "layout-shift" &&
-          !(entry as any).hadRecentInput
+          !(entry as PerformanceEntry & { hadRecentInput?: boolean })
+            .hadRecentInput
         ) {
-          clsValue += (entry as any).value;
+          clsValue += (entry as PerformanceEntry & { value: number }).value;
         }
       }
     });
@@ -77,7 +78,7 @@ export const usePerformance = () => {
 
     // Calculate Time to Interactive
     const timeToInteractive =
-      navigation.domContentLoadedEventEnd - navigation.navigationStart;
+      navigation.domContentLoadedEventEnd - navigation.fetchStart;
 
     setMetrics({
       loadTime,
@@ -212,5 +213,3 @@ export const useApiPerformance = () => {
 
   return { apiMetrics, measureApiCall };
 };
-
-

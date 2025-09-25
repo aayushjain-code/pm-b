@@ -46,7 +46,7 @@ const Button: React.FC<ButtonProps> = ({
       outline:
         "border-2 border-white text-white hover:bg-white hover:text-yellow-600 focus:ring-yellow-500",
     };
-    return variants[variant] || variants.primary;
+    return variants[variant || "primary"] || variants.primary;
   };
 
   const getSizeClasses = (size: ButtonVariantProps["size"]) => {
@@ -55,7 +55,7 @@ const Button: React.FC<ButtonProps> = ({
       md: "px-6 py-3 text-base",
       lg: "px-8 py-4 text-lg",
     };
-    return sizes[size] || sizes.md;
+    return sizes[size || "md"] || sizes.md;
   };
 
   const baseClasses =

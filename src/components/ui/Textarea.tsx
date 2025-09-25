@@ -58,7 +58,7 @@ const Textarea: React.FC<TextareaProps> = ({
       error: "border-red-500 focus:border-red-500 focus:ring-red-500",
       success: "border-green-500 focus:border-green-500 focus:ring-green-500",
     };
-    return variants[variant] || variants.default;
+    return variants[variant || "default"] || variants.default;
   };
 
   const getSizeClasses = (size: TextareaVariantProps["size"]) => {
@@ -67,7 +67,7 @@ const Textarea: React.FC<TextareaProps> = ({
       md: "px-4 py-3 text-base",
       lg: "px-4 py-4 text-lg",
     };
-    return sizes[size] || sizes.md;
+    return sizes[size || "md"] || sizes.md;
   };
 
   const getResizeClasses = (resize: TextareaProps["resize"]) => {
@@ -77,7 +77,7 @@ const Textarea: React.FC<TextareaProps> = ({
       horizontal: "resize-x",
       both: "resize",
     };
-    return resizeOptions[resize] || resizeOptions.vertical;
+    return resizeOptions[resize || "vertical"] || resizeOptions.vertical;
   };
 
   const baseClasses =
